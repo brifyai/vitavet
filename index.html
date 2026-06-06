@@ -420,27 +420,56 @@
       <div class="section__head">
         <span class="section__eyebrow">Galería</span>
         <h2 class="section__title">Momentos en VitaVet</h2>
-        <p class="section__sub">Capturas reales de nuestra clínica, nuestro equipo y las mascotas que atendemos cada día.</p>
+        <p class="section__sub" style="white-space:nowrap">Capturas reales de nuestra clínica, nuestro equipo y las mascotas que atendemos cada día.</p>
       </div>
 
-      <!-- Grid masonry -->
+      <!-- Grid masonry — primeras 10 visibles, resto con clase vv-hidden -->
       <div class="vv-gallery" id="vvGallery">
-        <div class="vv-item" data-index="0"><img src="momentos/m1.jpg"  alt="Momento VitaVet 1"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="1"><img src="momentos/m2.jpg"  alt="Momento VitaVet 2"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="2"><img src="momentos/m3.jpg"  alt="Momento VitaVet 3"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="3"><img src="momentos/m4.jpg"  alt="Momento VitaVet 4"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="4"><img src="momentos/m5.jpg"  alt="Momento VitaVet 5"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="5"><img src="momentos/m6.jpg"  alt="Momento VitaVet 6"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="6"><img src="momentos/m7.jpg"  alt="Momento VitaVet 7"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="7"><img src="momentos/m8.jpg"  alt="Momento VitaVet 8"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="8"><img src="momentos/m9.jpg"  alt="Momento VitaVet 9"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="9"><img src="momentos/m10.jpg" alt="Momento VitaVet 10" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="10"><img src="momentos/m11.jpg" alt="Momento VitaVet 11" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="11"><img src="momentos/m12.jpg" alt="Momento VitaVet 12" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="12"><img src="momentos/m13.jpg" alt="Momento VitaVet 13" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="13"><img src="momentos/m14.jpg" alt="Momento VitaVet 14" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
-        <div class="vv-item" data-index="14"><img src="momentos/m15.jpg" alt="Momento VitaVet 15" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="0"><img src="momentos/m1.jpg"   alt="Momento VitaVet 1"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="1"><img src="momentos/m2.jpg"   alt="Momento VitaVet 2"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="2"><img src="momentos/m3.jpg"   alt="Momento VitaVet 3"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="3"><img src="momentos/m4.jpg"   alt="Momento VitaVet 4"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="4"><img src="momentos/m5.jpg"   alt="Momento VitaVet 5"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="5"><img src="momentos/m6.jpg"   alt="Momento VitaVet 6"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="6"><img src="momentos/m7.jpg"   alt="Momento VitaVet 7"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="7"><img src="momentos/m8.jpg"   alt="Momento VitaVet 8"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="8"><img src="momentos/m9.jpg"   alt="Momento VitaVet 9"  loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="9"><img src="momentos/m10.jpg"  alt="Momento VitaVet 10" loading="eager"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <!-- Las siguientes solo se muestran al hacer clic en "Ver más" -->
+        <div class="vv-item vv-hidden" data-index="10"><img src="momentos/m11.jpg"  alt="Momento VitaVet 11" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="11"><img src="momentos/m12.jpg"  alt="Momento VitaVet 12" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="12"><img src="momentos/m13.jpg"  alt="Momento VitaVet 13" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="13"><img src="momentos/m14.jpg"  alt="Momento VitaVet 14" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="14"><img src="momentos/m15.jpg"  alt="Momento VitaVet 15" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="15"><img src="momentos/m16.jpg"  alt="Momento VitaVet 16" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="16"><img src="momentos/m17.jpg"  alt="Momento VitaVet 17" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="17"><img src="momentos/m18.jpg"  alt="Momento VitaVet 18" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="18"><img src="momentos/m19.jpg"  alt="Momento VitaVet 19" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="19"><img src="momentos/m20.jpg"  alt="Momento VitaVet 20" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="20"><img src="momentos/m21.jpg"  alt="Momento VitaVet 21" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="21"><img src="momentos/m22.jpg"  alt="Momento VitaVet 22" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="22"><img src="momentos/m23.jpg"  alt="Momento VitaVet 23" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="23"><img src="momentos/m24.jpg"  alt="Momento VitaVet 24" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="24"><img src="momentos/m25.jpg"  alt="Momento VitaVet 25" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="25"><img src="momentos/m26.jpg"  alt="Momento VitaVet 26" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="26"><img src="momentos/m27.jpg"  alt="Momento VitaVet 27" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="27"><img src="momentos/m28.jpg"  alt="Momento VitaVet 28" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="28"><img src="momentos/m29.jpg"  alt="Momento VitaVet 29" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="29"><img src="momentos/m30.jpg"  alt="Momento VitaVet 30" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="30"><img src="momentos/m31.jpg"  alt="Momento VitaVet 31" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="31"><img src="momentos/m32.jpg"  alt="Momento VitaVet 32" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="32"><img src="momentos/m33.jpg"  alt="Momento VitaVet 33" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item vv-hidden" data-index="33"><img src="momentos/m34.jpg"  alt="Momento VitaVet 34" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
       </div>
+
+      <!-- Botón Ver más -->
+      <div class="vv-load-wrap" id="vvLoadWrap">
+        <button class="vv-load-btn" id="vvLoadMore">
+          <span class="material-icons-round">add_photo_alternate</span>
+          Ver más fotos <span class="vv-load-count" id="vvLoadCount">(24 más)</span>
+        </button>
+      </div>
+
     </div>
   </section>
 
@@ -621,10 +650,68 @@
       .vv-lb__nav--next { right: .3rem; }
       .vv-lb__nav { width: 40px; height: 40px; }
     }
+
+    /* ── Ver más ── */
+    .vv-hidden {
+      display: none;
+    }
+    .vv-item.vv-reveal {
+      display: block;
+      animation: vvFadeIn .4s ease both;
+    }
+    @keyframes vvFadeIn {
+      from { opacity: 0; transform: translateY(16px) scale(.97); }
+      to   { opacity: 1; transform: none; }
+    }
+    .vv-load-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .vv-load-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: linear-gradient(135deg, var(--teal-d), var(--teal));
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .85rem 2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0,137,123,.3);
+      transition: transform .22s, box-shadow .22s, opacity .22s;
+    }
+    .vv-load-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,137,123,.4);
+    }
+    .vv-load-btn .material-icons-round { font-size: 1.3rem; }
+    .vv-load-count { font-weight: 400; opacity: .85; font-size: .88rem; }
+    #vvLoadWrap.vv-gone { display: none; }
   </style>
 
   <script>
     (function () {
+      // ── Ver más ──
+      const loadBtn  = document.getElementById('vvLoadMore');
+      const loadWrap = document.getElementById('vvLoadWrap');
+      const hidden   = Array.from(document.querySelectorAll('.vv-item.vv-hidden'));
+
+      if (loadBtn) {
+        loadBtn.addEventListener('click', () => {
+          hidden.forEach((el, i) => {
+            el.classList.remove('vv-hidden');
+            el.classList.add('vv-reveal');
+            el.style.animationDelay = `${i * 40}ms`;
+          });
+          loadWrap.classList.add('vv-gone');
+        });
+      }
+
+      // ── Lightbox ──
       const items   = Array.from(document.querySelectorAll('.vv-item'));
       const srcs    = items.map(el => el.querySelector('img').src);
       const alts    = items.map(el => el.querySelector('img').alt);
