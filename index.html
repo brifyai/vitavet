@@ -420,17 +420,300 @@
       <div class="section__head">
         <span class="section__eyebrow">Galería</span>
         <h2 class="section__title">Momentos en VitaVet</h2>
+        <p class="section__sub">Capturas reales de nuestra clínica, nuestro equipo y las mascotas que atendemos cada día.</p>
       </div>
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=500&q=80" alt="Perro y gato juntos en VitaVet" loading="lazy" decoding="async">
-        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Perro feliz en VitaVet" loading="lazy" decoding="async">
-        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Gato en consulta veterinaria" loading="lazy" decoding="async">
-        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=500&q=80" alt="Perro golden retriever" loading="lazy" decoding="async">
-        <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=500&q=80" alt="Mascotas en VitaVet" loading="lazy" decoding="async">
-        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80" alt="Gato en atención veterinaria" loading="lazy" decoding="async">
+
+      <!-- Grid masonry -->
+      <div class="vv-gallery" id="vvGallery">
+        <div class="vv-item" data-index="0"><img src="momentos/m1.jpg"  alt="Momento VitaVet 1"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="1"><img src="momentos/m2.jpg"  alt="Momento VitaVet 2"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="2"><img src="momentos/m3.jpg"  alt="Momento VitaVet 3"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="3"><img src="momentos/m4.jpg"  alt="Momento VitaVet 4"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="4"><img src="momentos/m5.jpg"  alt="Momento VitaVet 5"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="5"><img src="momentos/m6.jpg"  alt="Momento VitaVet 6"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="6"><img src="momentos/m7.jpg"  alt="Momento VitaVet 7"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="7"><img src="momentos/m8.jpg"  alt="Momento VitaVet 8"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="8"><img src="momentos/m9.jpg"  alt="Momento VitaVet 9"  loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="9"><img src="momentos/m10.jpg" alt="Momento VitaVet 10" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="10"><img src="momentos/m11.jpg" alt="Momento VitaVet 11" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="11"><img src="momentos/m12.jpg" alt="Momento VitaVet 12" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="12"><img src="momentos/m13.jpg" alt="Momento VitaVet 13" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="13"><img src="momentos/m14.jpg" alt="Momento VitaVet 14" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
+        <div class="vv-item" data-index="14"><img src="momentos/m15.jpg" alt="Momento VitaVet 15" loading="lazy"><div class="vv-item__zoom"><span class="material-icons-round">zoom_in</span></div></div>
       </div>
     </div>
   </section>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="vv-lb" id="vvLightbox" hidden role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+    <button class="vv-lb__close" id="vvLbClose" aria-label="Cerrar"><span class="material-icons-round">close</span></button>
+    <button class="vv-lb__nav vv-lb__nav--prev" id="vvLbPrev" aria-label="Anterior"><span class="material-icons-round">chevron_left</span></button>
+    <div class="vv-lb__stage">
+      <img class="vv-lb__img" id="vvLbImg" src="" alt="">
+      <div class="vv-lb__loader" id="vvLbLoader"><span class="material-icons-round">sync</span></div>
+    </div>
+    <button class="vv-lb__nav vv-lb__nav--next" id="vvLbNext" aria-label="Siguiente"><span class="material-icons-round">chevron_right</span></button>
+    <div class="vv-lb__strip" id="vvLbStrip"></div>
+    <div class="vv-lb__counter" id="vvLbCounter"></div>
+  </div>
+
+  <style>
+    /* ══ Gallery grid ══ */
+    .vv-gallery {
+      columns: 3 280px;
+      gap: 1rem;
+    }
+    .vv-item {
+      position: relative;
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,.10);
+      transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s;
+    }
+    .vv-item:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 12px 32px rgba(0,137,123,.22);
+    }
+    .vv-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      transition: filter .35s;
+    }
+    .vv-item:hover img { filter: brightness(.82); }
+    .vv-item__zoom {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .25s;
+    }
+    .vv-item:hover .vv-item__zoom { opacity: 1; }
+    .vv-item__zoom .material-icons-round {
+      font-size: 2.4rem;
+      color: #fff;
+      background: rgba(0,137,123,.75);
+      border-radius: 50%;
+      padding: .55rem;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ══ Lightbox ══ */
+    .vv-lb {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(10,14,18,.96);
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .28s ease;
+    }
+    .vv-lb[hidden] { display: none; }
+    .vv-lb.vv-lb--visible { opacity: 1; }
+
+    .vv-lb__close {
+      position: absolute;
+      top: 1.2rem; right: 1.4rem;
+      background: rgba(255,255,255,.12);
+      border: none; border-radius: 50%;
+      width: 44px; height: 44px;
+      display: grid; place-items: center;
+      color: #fff; cursor: pointer; z-index: 2;
+      transition: background .2s;
+    }
+    .vv-lb__close:hover { background: rgba(255,255,255,.25); }
+    .vv-lb__close .material-icons-round { font-size: 1.5rem; }
+
+    .vv-lb__stage {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: min(90vw, 1100px);
+      max-height: 70vh;
+      width: 100%;
+    }
+    .vv-lb__img {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 24px 64px rgba(0,0,0,.5);
+      transition: opacity .22s ease, transform .22s ease;
+      display: block;
+    }
+    .vv-lb__img.vv-fade { opacity: 0; transform: scale(.96); }
+
+    .vv-lb__loader {
+      position: absolute;
+      color: var(--teal);
+      font-size: 2.5rem;
+      display: none;
+    }
+    .vv-lb__loader.active { display: block; animation: lbSpin 1s linear infinite; }
+    @keyframes lbSpin { to { transform: rotate(360deg); } }
+
+    .vv-lb__nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,.10);
+      border: 1.5px solid rgba(255,255,255,.18);
+      border-radius: 50%; width: 50px; height: 50px;
+      display: grid; place-items: center;
+      color: #fff; cursor: pointer; z-index: 3;
+      transition: background .2s, transform .2s;
+    }
+    .vv-lb__nav:hover { background: var(--teal); transform: translateY(-50%) scale(1.1); }
+    .vv-lb__nav .material-icons-round { font-size: 1.8rem; }
+    .vv-lb__nav--prev { left: 1rem; }
+    .vv-lb__nav--next { right: 1rem; }
+
+    /* Strip / thumbnails */
+    .vv-lb__strip {
+      display: flex;
+      gap: .5rem;
+      margin-top: 1.1rem;
+      overflow-x: auto;
+      max-width: min(90vw, 900px);
+      padding: .3rem .5rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--teal) transparent;
+    }
+    .vv-lb__strip::-webkit-scrollbar { height: 4px; }
+    .vv-lb__strip::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 4px; }
+    .vv-lb__thumb {
+      flex-shrink: 0;
+      width: 56px; height: 42px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: .45;
+      border: 2px solid transparent;
+      transition: opacity .2s, border-color .2s, transform .2s;
+    }
+    .vv-lb__thumb:hover { opacity: .8; transform: scale(1.08); }
+    .vv-lb__thumb.active { opacity: 1; border-color: var(--teal); }
+
+    /* Counter */
+    .vv-lb__counter {
+      position: absolute;
+      top: 1.2rem; left: 1.4rem;
+      color: rgba(255,255,255,.7);
+      font-size: .82rem; font-weight: 600;
+      letter-spacing: .04em;
+      background: rgba(255,255,255,.08);
+      padding: .3rem .75rem;
+      border-radius: 99px;
+    }
+
+    @media (max-width: 640px) {
+      .vv-gallery { columns: 2 140px; }
+      .vv-lb__nav--prev { left: .3rem; }
+      .vv-lb__nav--next { right: .3rem; }
+      .vv-lb__nav { width: 40px; height: 40px; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      const items   = Array.from(document.querySelectorAll('.vv-item'));
+      const srcs    = items.map(el => el.querySelector('img').src);
+      const alts    = items.map(el => el.querySelector('img').alt);
+
+      const lb      = document.getElementById('vvLightbox');
+      const lbImg   = document.getElementById('vvLbImg');
+      const lbClose = document.getElementById('vvLbClose');
+      const lbPrev  = document.getElementById('vvLbPrev');
+      const lbNext  = document.getElementById('vvLbNext');
+      const lbStrip = document.getElementById('vvLbStrip');
+      const lbCount = document.getElementById('vvLbCounter');
+      const lbLoad  = document.getElementById('vvLbLoader');
+
+      let current = 0;
+
+      // Build thumbnails
+      srcs.forEach((src, i) => {
+        const th = document.createElement('img');
+        th.src = src; th.alt = alts[i];
+        th.className = 'vv-lb__thumb';
+        th.addEventListener('click', () => goTo(i));
+        lbStrip.appendChild(th);
+      });
+
+      const thumbs = Array.from(lbStrip.querySelectorAll('.vv-lb__thumb'));
+
+      function goTo(idx) {
+        current = (idx + srcs.length) % srcs.length;
+        lbImg.classList.add('vv-fade');
+        lbLoad.classList.add('active');
+
+        const newImg = new Image();
+        newImg.src = srcs[current];
+        newImg.onload = () => {
+          lbImg.src = srcs[current];
+          lbImg.alt = alts[current];
+          lbLoad.classList.remove('active');
+          requestAnimationFrame(() => lbImg.classList.remove('vv-fade'));
+        };
+
+        // Counter
+        lbCount.textContent = `${current + 1} / ${srcs.length}`;
+
+        // Thumbnails active state
+        thumbs.forEach((t, i) => t.classList.toggle('active', i === current));
+        thumbs[current].scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+      }
+
+      function openLb(idx) {
+        lb.hidden = false;
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => lb.classList.add('vv-lb--visible'));
+        goTo(idx);
+        lbClose.focus();
+      }
+
+      function closeLb() {
+        lb.classList.remove('vv-lb--visible');
+        setTimeout(() => { lb.hidden = true; document.body.style.overflow = ''; }, 280);
+      }
+
+      // Open on grid click
+      items.forEach((el, i) => el.addEventListener('click', () => openLb(i)));
+
+      // Controls
+      lbClose.addEventListener('click', closeLb);
+      lbPrev.addEventListener('click', () => goTo(current - 1));
+      lbNext.addEventListener('click', () => goTo(current + 1));
+      lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+
+      // Keyboard
+      document.addEventListener('keydown', e => {
+        if (lb.hidden) return;
+        if (e.key === 'Escape')       closeLb();
+        if (e.key === 'ArrowLeft')    goTo(current - 1);
+        if (e.key === 'ArrowRight')   goTo(current + 1);
+      });
+
+      // Touch swipe
+      let touchX = null;
+      lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
+        touchX = null;
+      });
+    })();
+  </script>
 
   <!-- ============ APPOINTMENT / CONTACT ============ -->
   <section class="section appointment" id="appointment">
