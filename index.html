@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitaVet · Clínica Veterinaria</title>
+  <meta name="description" content="VitaVet — cuidado veterinario moderno para tu mejor amigo. Salud, peluquería, nutrición y adopción." />
+  <meta name="theme-color" content="#00897b" />
+  <link rel="canonical" href="https://www.vitavet.cl/" />
+
+  <!-- Favicon (emoji SVG, sin archivo externo) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="VitaVet" />
+  <meta property="og:title" content="VitaVet · Clínica Veterinaria" />
+  <meta property="og:description" content="Cuidado veterinario moderno para tu mejor amigo. Salud, peluquería, nutrición y adopción." />
+  <meta property="og:url" content="https://www.vitavet.cl/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VitaVet · Clínica Veterinaria" />
+  <meta name="twitter:description" content="Cuidado veterinario moderno para tu mejor amigo." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Datos estructurados: negocio local veterinario -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "VitaVet",
+    "description": "Clínica veterinaria moderna: salud, peluquería, nutrición, cirugía y adopción.",
+    "url": "https://www.vitavet.cl/",
+    "telephone": "+56912345678",
+    "email": "contacto@vitavetclinica.com",
+    "image": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. El Guanaco Norte 1371",
+      "addressLocality": "Santiago",
+      "addressCountry": "CL"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "21:00" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <div class="brand">
+        <a href="#hero"><img src="logo.png" alt="VitaVet" class="brand__logo" /></a>
+        <div class="brand__text">
+          <span class="brand__sub">Clínica Veterinaria</span>
+          <span class="brand__name">VITAVET</span>
+          <span class="brand__phones"><a href="tel:+56965354764">+56 9 65354764</a>&nbsp;·&nbsp;<a href="tel:+56222163180">+56 2 22163180</a></span>
+        </div>
+      </div>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#hero">Inicio</a>
+        <a href="#services">Servicios</a>
+        <a href="#about">Nosotros</a>
+        <a href="#team">Equipo</a>
+        <a href="#gallery">Galería</a>
+        <a href="#contact">Contacto</a>
+        <a href="https://wa.me/56965354764" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Reservar cita</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-controls="navLinks" aria-expanded="false">
+        <span aria-hidden="true" class="material-icons-round">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide is-active" style="background-image:url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1600&q=80');background-position:right center"></div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=1600&q=80');background-position:right 20%"></div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?auto=format&fit=crop&w=1600&q=80');background-position:center center"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <span class="hero__eyebrow">Cuidamos a tu mejor amigo</span>
+      <h1 class="hero__title">Salud y cariño para tu <span>mascota</span></h1>
+      <p class="hero__text">Atención veterinaria moderna con un equipo que ama a los animales tanto como tú. Agenda tu visita en segundos.</p>
+      <div class="hero__actions">
+        <a href="#appointment" class="btn btn--primary btn--lg">Pedir una cita</a>
+        <a href="#services" class="btn btn--ghost btn--lg">Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero__wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L0,120Z"></path></svg>
+    </div>
+  </section>
+
+  <!-- ============ QUICK FEATURES ============ -->
+  <section class="quick container">
+    <div class="quick__card">
+      <span aria-hidden="true" class="material-icons-round">schedule</span>
+      <div><h4>Horarios</h4><p>Lun–Vie · 9:00–22:00</p><p>Sáb · 10:00–21:00</p></div>
+    </div>
+    <div class="quick__card">
+      <span aria-hidden="true" class="material-icons-round">emergency</span>
+      <div><h4>Beneficios tarjeta vecino</h4><p>Huechuraba</p></div>
+    </div>
+    <div class="quick__card">
+      <span aria-hidden="true" class="material-icons-round">place</span>
+      <div><h4>Visítanos</h4><p>Av. El Guanaco Norte 1371</p></div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow">Lo que hacemos</span>
+        <h2 class="section__title">Nuestros servicios</h2>
+        <p class="section__sub">Todo lo que tu compañero necesita, bajo un mismo techo.</p>
+      </div>
+
+      <div class="svc-carousel-wrap">
+        <button class="svc-arr svc-arr--prev" id="svcPrev" aria-label="Anterior">
+          <span class="material-icons-round">chevron_left</span>
+        </button>
+        <div class="svc-track" id="svcTrack">
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=500&q=80" alt="Clínica General" loading="lazy">
+            <div class="svc-card__label">Clínica General</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1770836037289-e00e5f351d11?auto=format&fit=crop&w=500&q=80" alt="Medicina Especializada" loading="lazy">
+            <div class="svc-card__label">Medicina Especializada</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80" alt="Hospital" loading="lazy">
+            <div class="svc-card__label">Hospital</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80" alt="Imagenología" loading="lazy">
+            <div class="svc-card__label">Imagenología</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=500&q=80" alt="Cirugía" loading="lazy">
+            <div class="svc-card__label">Cirugía</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=500&q=80" alt="Peluquería" loading="lazy">
+            <div class="svc-card__label">Peluquería</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Farmacia y Alimentos" loading="lazy">
+            <div class="svc-card__label">Farmacia y Alimentos</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=500&q=80" alt="Laboratorio" loading="lazy">
+            <div class="svc-card__label">Laboratorio</div>
+          </article>
+          <article class="svc-card">
+            <img src="https://images.unsplash.com/photo-1601880348117-25c1127a95df?auto=format&fit=crop&w=500&q=80" alt="Hospedaje" loading="lazy">
+            <div class="svc-card__label">Hospedaje</div>
+          </article>
+        </div>
+        <button class="svc-arr svc-arr--next" id="svcNext" aria-label="Siguiente">
+          <span class="material-icons-round">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <div class="container grid grid--4">
+      <div class="stat"><span aria-hidden="true" class="material-icons-round">sentiment_satisfied</span><b class="stat__num" data-target="6640">0</b><span>Clientes felices</span></div>
+      <div class="stat"><span aria-hidden="true" class="material-icons-round">medical_services</span><b class="stat__num" data-target="12">0</b><span>Especialistas</span></div>
+      <div class="stat"><span aria-hidden="true" class="material-icons-round">pets</span><b class="stat__num" data-target="5420">0</b><span>Mascotas atendidas</span></div>
+      <div class="stat"><span aria-hidden="true" class="material-icons-round">workspace_premium</span><b class="stat__num" data-target="6" data-prefix="+">0</b><span>Años de experiencia</span></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section section--alt" id="about">
+    <div class="container about">
+      <div class="about__media">
+        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=900&q=80" alt="Veterinaria con perro" / loading="lazy" decoding="async" />
+        <div class="about__badge"><span aria-hidden="true" class="material-icons-round">verified</span> Clínica certificada por SEREMI de Salud</div>
+      </div>
+      <div class="about__body">
+        <span class="section__eyebrow">Sobre nosotros</span>
+        <h2 class="section__title">Cuidamos a tu mejor amigo como si fuera nuestro</h2>
+        <p>En VitaVet creemos que cada mascota merece atención de primer nivel. Contamos con un equipo de profesionales comprometidos, equipamiento de última tecnología y un ambiente cálido donde tu compañero se siente en casa desde el primer momento.</p>
+        <ul class="about__list">
+          <li><span aria-hidden="true" class="material-icons-round">check_circle</span> Equipamiento de alta tecnología</li>
+          <li><span aria-hidden="true" class="material-icons-round">check_circle</span> Atención personalizada y empática</li>
+          <li><span aria-hidden="true" class="material-icons-round">check_circle</span> Profesionales premiados y certificados</li>
+        </ul>
+        <a href="#appointment" class="btn btn--primary">Agendar visita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow">Por qué elegirnos</span>
+        <h2 class="section__title">La diferencia VitaVet</h2>
+      </div>
+      <div class="grid grid--4">
+        <div class="card why"><div class="why__icon"><span aria-hidden="true" class="material-icons-round">military_tech</span></div><h4>Líderes del sector</h4><p>Años de trayectoria respaldando cada diagnóstico.</p></div>
+        <div class="card why"><div class="why__icon"><span aria-hidden="true" class="material-icons-round">support_agent</span></div><h4>Soporte cercano</h4><p>Te acompañamos antes, durante y después de cada visita.</p></div>
+        <div class="card why"><div class="why__icon"><span aria-hidden="true" class="material-icons-round">volunteer_activism</span></div><h4>Cuidado especial</h4><p>Atención adaptada a cada mascota y su personalidad.</p></div>
+        <div class="card why"><div class="why__icon"><span aria-hidden="true" class="material-icons-round">verified_user</span></div><h4>Calidad garantizada</h4><p>Productos y procedimientos de la más alta calidad.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="section section--alt" id="team">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow">Nuestro equipo</span>
+        <h2 class="section__title" style="white-space:nowrap">Especialistas que aman lo que hacen</h2>
+      </div>
+      <div class="svc-carousel-wrap">
+        <button class="svc-arr svc-arr--prev" id="teamPrev" aria-label="Anterior"><span class="material-icons-round">chevron_left</span></button>
+        <div class="svc-track team-track" id="teamTrack">
+          <article class="card team team-slide">
+            <img src="team/team1.jpg" alt="Dra. Xanadú Tárano León" loading="lazy">
+            <div class="team__body"><h4>Dra. Xanadú Tárano León</h4><span>Directora Médica</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team2.jpg" alt="Dra. Constanza Lizana" loading="lazy">
+            <div class="team__body"><h4>Dra. Constanza Lizana</h4><span>Especialista Uronefrología</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team3.jpg" alt="Dr. Sebastián Jeffs" loading="lazy">
+            <div class="team__body"><h4>Dr. Sebastián Jeffs</h4><span>Traumatología y Cirugía Traumatológica</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team4.jpg" alt="Dr. Jairo Lancheros" loading="lazy">
+            <div class="team__body"><h4>Dr. Jairo Lancheros</h4><span>Anestesiología y Cirugía de Tejidos Blandos</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team5.jpg" alt="Dr. Cristian Rocha" loading="lazy">
+            <div class="team__body"><h4>Dr. Cristian Rocha</h4><span>Cirugía de Tejidos Blandos</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team6.jpg" alt="Dra. María de Los Ángeles Piña" loading="lazy">
+            <div class="team__body"><h4>Dra. María de Los Ángeles Piña</h4><span>Cardiología</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team7.jpg" alt="Dr. Víctor Jaña" loading="lazy">
+            <div class="team__body"><h4>Dr. Víctor Jaña</h4><span>Procedimientos Endoscópicos</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team8.jpg" alt="Dra. Nicole Muñoz" loading="lazy">
+            <div class="team__body"><h4>Dra. Nicole Muñoz</h4><span>Oncología</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team9.jpg" alt="Dra. Cecilia Díaz" loading="lazy">
+            <div class="team__body"><h4>Dra. Cecilia Díaz</h4><span>Endocrinología</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team10.jpg" alt="Dra. María J. Ruíz" loading="lazy">
+            <div class="team__body"><h4>Dra. María J. Ruíz</h4><span>Imagenología</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team11.jpg" alt="Dr. René Maureira" loading="lazy">
+            <div class="team__body"><h4>Dr. René Maureira</h4><span>Especialista en Anestesiología</span></div>
+          </article>
+          <article class="card team team-slide">
+            <img src="team/team12.jpg" alt="Jorge Ibacache" loading="lazy">
+            <div class="team__body"><h4>Jorge Ibacache</h4><span>Técnico veterinario · Peluquero canino y felino</span></div>
+          </article>
+        </div>
+        <button class="svc-arr svc-arr--next" id="teamNext" aria-label="Siguiente"><span class="material-icons-round">chevron_right</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow section__eyebrow--light">Testimonios</span>
+        <h2 class="section__title section__title--light">Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="testi" id="testi">
+        <div class="testi__track" id="testiTrack">
+          <figure class="testi__item">
+            <span aria-hidden="true" class="material-icons-round testi__quote">format_quote</span>
+            <blockquote>Trajeron a mi perrito de vuelta a la vida. El equipo es atento, profesional y muy cariñoso. ¡Mil gracias!</blockquote>
+            <figcaption><img src="https://i.pravatar.cc/80?img=12" alt="" loading="lazy" decoding="async"><div><b>Marcela Pérez</b><span>Dueña de Toby</span></div></figcaption>
+          </figure>
+          <figure class="testi__item">
+            <span aria-hidden="true" class="material-icons-round testi__quote">format_quote</span>
+            <blockquote>La mejor veterinaria de la ciudad. Instalaciones impecables y precios justos. Mi gata quedó feliz.</blockquote>
+            <figcaption><img src="https://i.pravatar.cc/80?img=32" alt="" loading="lazy" decoding="async"><div><b>Diego Fuentes</b><span>Dueño de Mishi</span></div></figcaption>
+          </figure>
+          <figure class="testi__item">
+            <span aria-hidden="true" class="material-icons-round testi__quote">format_quote</span>
+            <blockquote style="white-space:nowrap">Atención de urgencia a medianoche y todo salió perfecto. Confianza total en VitaVet.</blockquote>
+            <figcaption><img src="https://i.pravatar.cc/80?img=45" alt="" loading="lazy" decoding="async"><div><b>Sofía Lagos</b><span>Dueña de Rocco</span></div></figcaption>
+          </figure>
+        </div>
+        <div class="testi__dots" id="testiDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow">Galería</span>
+        <h2 class="section__title">Momentos en VitaVet</h2>
+      </div>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=500&q=80" alt="" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=500&q=80" alt="" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=500&q=80" alt="" loading="lazy" decoding="async">
+        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80" alt="" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPOINTMENT / CONTACT ============ -->
+  <section class="section appointment" id="appointment">
+    <div class="container appt">
+      <div class="appt__info" id="contact">
+        <span class="section__eyebrow section__eyebrow--light">Contacto</span>
+        <h2 class="section__title section__title--light">Agenda una cita</h2>
+        <p>Completa el formulario y te confirmamos tu hora. También puedes escribirnos o visitarnos.</p>
+        <ul class="appt__list">
+          <li><span aria-hidden="true" class="material-icons-round">place</span> <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Veterinaria+VitaVet/@-33.3522618,-70.6716778,17z/data=!4m15!1m8!3m7!1s0x9662c7a802eefa25:0x3b49ef07f04d17f4!2sAv.+el+Guanaco+Nte.+1371,+8580000+Huechuraba,+Regi%C3%B3n+Metropolitana!3b1!8m2!3d-33.3522618!4d-70.6691029!16s%2Fg%2F11gm_9rptx!3m5!1s0x9662cb7aab73eaf1:0xd9ccfbd671196094!8m2!3d-33.3522618!4d-70.6691029!16s%2Fg%2F11t5nnj6n8?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Av. El Guanaco Norte 1371, Santiago</a></li>
+          <li><span aria-hidden="true" class="material-icons-round">call</span> <a href="tel:+56912345678">+56 9 1234 5678</a></li>
+          <li><span aria-hidden="true" class="material-icons-round">mail</span> <a href="mailto:contacto@vitavetclinica.com">contacto@vitavetclinica.com</a></li>
+          <li><span aria-hidden="true" class="material-icons-round">schedule</span> Lun–Vie · 9:00 – 22:00 &nbsp;|&nbsp; Sáb · 10:00 – 21:00</li>
+        </ul>
+      </div>
+
+      <!-- Reemplaza FORM_ID por tu endpoint real de Formspree (https://formspree.io).
+           Si se deja el placeholder, el formulario abre el cliente de correo como respaldo. -->
+      <form class="appt__form card" id="apptForm" method="POST" action="send.php" novalidate>
+        <div class="field"><label>Nombre</label><input type="text" name="name" required placeholder="Tu nombre" /></div>
+        <div class="field"><label>Email</label><input type="email" name="email" required placeholder="tu@email.com" /></div>
+        <div class="field"><label>Teléfono</label><input type="tel" name="phone" placeholder="+56 9 ..." /></div>
+        <div class="field"><label>Servicio</label>
+          <select name="service">
+            <option>Consulta general</option>
+            <option>Peluquería</option>
+            <option>Vacunación</option>
+            <option>Cirugía</option>
+            <option>Urgencia</option>
+          </select>
+        </div>
+        <div class="field field--full"><label>Mensaje</label><textarea name="message" rows="3" placeholder="Cuéntanos sobre tu mascota..."></textarea></div>
+        <button type="submit" class="btn btn--primary btn--lg field--full">Enviar solicitud</button>
+        <p class="appt__success" id="apptSuccess" role="status" aria-live="polite">¡Gracias! Te contactaremos muy pronto. 🐾</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ MAPA ============ -->
+  <section class="map-section">
+    <iframe
+      src="https://maps.google.com/maps?q=-33.3522618,-70.6691029&z=17&output=embed"
+      width="100%"
+      height="420"
+      style="border:0;display:block"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación VitaVet — Av. El Guanaco Norte 1371, Huechuraba">
+    </iframe>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#hero" class="brand brand--light">
+          <img src="logo.png" alt="VitaVet" class="brand__logo" />
+        </a>
+        <p>En VitaVet nos dedicamos a cuidar la salud y el bienestar de tu compañero con profesionalismo, tecnología y mucho cariño.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/clinica_veterinaria_vitavet/" target="_blank" rel="noopener" aria-label="Instagram"><span aria-hidden="true" class="material-icons-round">photo_camera</span></a>
+          <a href="https://wa.me/56912345678" target="_blank" rel="noopener" aria-label="WhatsApp"><span aria-hidden="true" class="material-icons-round">chat</span></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>Enlaces</h5>
+        <a href="#services">Servicios</a>
+        <a href="#about">Nosotros</a>
+        <a href="#team">Equipo</a>
+      </div>
+      <div class="footer__col">
+        <h5>Horario</h5>
+        <p>Lunes a Viernes · 9:00 – 22:00</p>
+        <p>Sábado · 10:00 – 21:00</p>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 VitaVet · Todos los derechos reservados.</p>
+      <p>Hecho con <span aria-hidden="true" class="material-icons-round">favorite</span> para las mascotas.</p>
+    </div>
+  </footer>
+
+  <div class="fab-group">
+    <a href="https://wa.me/56965354764" target="_blank" rel="noopener" class="fab-btn fab-btn--wa" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.855L.057 23.786a.5.5 0 0 0 .614.614l5.932-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.92a9.91 9.91 0 0 1-5.034-1.371l-.361-.214-3.732.926.944-3.73-.235-.384A9.914 9.914 0 0 1 2.08 12C2.08 6.514 6.514 2.08 12 2.08S21.92 6.514 21.92 12 17.486 21.92 12 21.92z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/clinica_veterinaria_vitavet/" target="_blank" rel="noopener" class="fab-btn fab-btn--ig" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
