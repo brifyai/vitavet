@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.vitavetclinica.com/sitemap.xml
+
+# Bloquear archivos internos
+Disallow: /send.php
+Disallow: /.claude/
