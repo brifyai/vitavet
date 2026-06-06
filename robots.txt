@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.vitavet.cl/sitemap.xml
+Sitemap: https://vitavet.cl/sitemap.xml
 
 # Bloquear archivos internos
 Disallow: /send.php
