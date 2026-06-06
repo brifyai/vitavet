@@ -200,9 +200,10 @@
       <span aria-hidden="true" class="material-icons-round">schedule</span>
       <div><h4>Horarios</h4><p>Lun–Vie · 9:00–22:00</p><p>Sáb · 10:00–21:00</p></div>
     </div>
-    <div class="quick__card">
-      <span aria-hidden="true" class="material-icons-round">emergency</span>
+    <div class="quick__card quick__card--clickable" id="btnTarjetaVecino" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver beneficios tarjeta vecino Huechuraba">
+      <span aria-hidden="true" class="material-icons-round">card_membership</span>
       <div><h4>Beneficios tarjeta vecino</h4><p>Huechuraba</p></div>
+      <span class="quick__badge">Ver</span>
     </div>
     <div class="quick__card">
       <span aria-hidden="true" class="material-icons-round">place</span>
@@ -515,6 +516,20 @@
   </footer>
 
   <div class="fab-group">
+    <!-- 🏡 Tarjeta Vecino FAB -->
+    <div class="fab-tv-wrap">
+      <span class="fab-tv-tooltip">Beneficios Tarjeta Vecino<br><small>Huechuraba</small></span>
+      <button class="fab-btn fab-btn--tv" id="fabTarjetaVecino" aria-label="Ver beneficios Tarjeta Vecino Huechuraba">
+        <!-- Ícono tarjeta con estrella -->
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="5" width="20" height="14" rx="2.5" ry="2.5" fill="white" opacity="0.25"/>
+          <rect x="2" y="5" width="20" height="14" rx="2.5" ry="2.5" fill="none" stroke="white" stroke-width="1.5"/>
+          <rect x="2" y="9" width="20" height="3" fill="white" opacity="0.35"/>
+          <path d="M12 11.5l1.03 2.09 2.31.34-1.67 1.63.39 2.29L12 16.77l-2.06 1.08.39-2.29-1.67-1.63 2.31-.34z" fill="white"/>
+        </svg>
+        <span class="fab-btn--tv-pulse"></span>
+      </button>
+    </div>
     <a href="https://wa.me/56965354764" target="_blank" rel="noopener" class="fab-btn fab-btn--wa" aria-label="WhatsApp">
       <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.855L.057 23.786a.5.5 0 0 0 .614.614l5.932-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.92a9.91 9.91 0 0 1-5.034-1.371l-.361-.214-3.732.926.944-3.73-.235-.384A9.914 9.914 0 0 1 2.08 12C2.08 6.514 6.514 2.08 12 2.08S21.92 6.514 21.92 12 17.486 21.92 12 21.92z"/></svg>
     </a>
@@ -522,6 +537,460 @@
       <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
     </a>
   </div>
+
+  <!-- ============ MODAL TARJETA VECINO ============ -->
+  <div class="tv-overlay" id="tvOverlay" role="dialog" aria-modal="true" aria-labelledby="tvTitle" hidden>
+    <div class="tv-modal">
+      <!-- Header -->
+      <div class="tv-modal__header">
+        <div class="tv-modal__logo-wrap">
+          <img src="https://tarjeta.huechuraba.cl/img/logo2.png" alt="Mi Huechuraba Tarjeta Vecino" class="tv-modal__logo">
+        </div>
+        <div>
+          <p class="tv-modal__eyebrow">Beneficios exclusivos para vecinos de</p>
+          <h2 class="tv-modal__title" id="tvTitle">Tarjeta Vecino Huechuraba</h2>
+          <p class="tv-modal__subtitle">Presenta tu tarjeta en VitaVet y accede a estos descuentos especiales</p>
+        </div>
+        <button class="tv-modal__close" id="tvClose" aria-label="Cerrar">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+
+      <!-- Benefits grid -->
+      <div class="tv-benefits">
+
+        <div class="tv-benefit">
+          <div class="tv-benefit__icon"><span class="material-icons-round">local_hospital</span></div>
+          <div class="tv-benefit__body">
+            <h3>Consulta de Medicina General</h3>
+            <p>Atención clínica completa para tu mascota con nuestros especialistas.</p>
+            <span class="tv-benefit__cond"><span class="material-icons-round">info</span> Presentar Tarjeta Vecino Huechuraba</span>
+          </div>
+          <div class="tv-benefit__badge tv-badge--green">20% OFF</div>
+        </div>
+
+        <div class="tv-benefit">
+          <div class="tv-benefit__icon"><span class="material-icons-round">clean_hands</span></div>
+          <div class="tv-benefit__body">
+            <h3>Profilaxis Dental</h3>
+            <p>Limpieza dental profesional para prevenir enfermedades periodontales.</p>
+            <span class="tv-benefit__cond"><span class="material-icons-round">info</span> Presentar Tarjeta Vecino Huechuraba</span>
+          </div>
+          <div class="tv-benefit__badge tv-badge--green">20% OFF</div>
+        </div>
+
+        <div class="tv-benefit">
+          <div class="tv-benefit__icon"><span class="material-icons-round">bug_report</span></div>
+          <div class="tv-benefit__body">
+            <h3>Desparasitaciones</h3>
+            <p>Tratamiento antiparasitario interno y externo para una mascota sana.</p>
+            <span class="tv-benefit__cond"><span class="material-icons-round">info</span> Presentar Tarjeta Vecino Huechuraba</span>
+          </div>
+          <div class="tv-benefit__badge tv-badge--green">20% OFF</div>
+        </div>
+
+        <div class="tv-benefit">
+          <div class="tv-benefit__icon"><span class="material-icons-round">healing</span></div>
+          <div class="tv-benefit__body">
+            <h3>Esterilizaciones</h3>
+            <p>Procedimiento quirúrgico seguro para el control responsable de población.</p>
+            <span class="tv-benefit__cond"><span class="material-icons-round">info</span> Presentar Tarjeta Vecino Huechuraba</span>
+          </div>
+          <div class="tv-benefit__badge tv-badge--teal">15% OFF</div>
+        </div>
+
+        <div class="tv-benefit">
+          <div class="tv-benefit__icon"><span class="material-icons-round">vaccines</span></div>
+          <div class="tv-benefit__body">
+            <h3>Vacunas Obligatorias</h3>
+            <p>Vacunas esenciales para la protección de tu mascota según calendario oficial.</p>
+            <span class="tv-benefit__cond"><span class="material-icons-round">info</span> Presentar Tarjeta Vecino Huechuraba</span>
+          </div>
+          <div class="tv-benefit__badge tv-badge--teal">15% OFF</div>
+        </div>
+
+        <div class="tv-benefit">
+          <div class="tv-benefit__icon"><span class="material-icons-round">content_cut</span></div>
+          <div class="tv-benefit__body">
+            <h3>Peluquería Canina</h3>
+            <p>Baño, corte y estilizado a cargo de nuestro técnico especializado.</p>
+            <span class="tv-benefit__cond"><span class="material-icons-round">info</span> Presentar Tarjeta Vecino Huechuraba</span>
+          </div>
+          <div class="tv-benefit__badge tv-badge--blue">10% OFF</div>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="tv-modal__footer">
+        <span class="tv-modal__valid"><span class="material-icons-round">event_available</span> Válido hasta el 13 de febrero de 2027</span>
+        <a href="https://tarjeta.huechuraba.cl/beneficios/62" target="_blank" rel="noopener" class="tv-modal__cta">Ver detalle oficial <span class="material-icons-round">open_in_new</span></a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* ── Tarjeta Vecino FAB ── */
+    .fab-tv-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .fab-btn--tv {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #013C8C 0%, #0057c8 55%, #00A0DF 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(1,60,140,.45);
+      transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+      position: relative;
+      overflow: visible;
+    }
+    .fab-btn--tv svg {
+      width: 26px;
+      height: 26px;
+      position: relative;
+      z-index: 1;
+    }
+    .fab-btn--tv:hover {
+      transform: scale(1.12);
+      filter: brightness(1.1);
+      box-shadow: 0 8px 28px rgba(1,60,140,.55);
+    }
+    /* Pulse ring */
+    .fab-btn--tv-pulse {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: rgba(0,160,223,.35);
+      animation: tvPulse 2.2s ease-out infinite;
+      pointer-events: none;
+    }
+    @keyframes tvPulse {
+      0%   { transform: scale(1);   opacity: .8; }
+      70%  { transform: scale(1.7); opacity: 0;  }
+      100% { transform: scale(1.7); opacity: 0;  }
+    }
+    /* Tooltip */
+    .fab-tv-tooltip {
+      position: absolute;
+      right: calc(100% + 12px);
+      top: 50%;
+      transform: translateY(-50%) translateX(6px);
+      background: #013C8C;
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      line-height: 1.35;
+      white-space: nowrap;
+      padding: .45rem .85rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.22);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .22s ease, transform .22s ease;
+    }
+    .fab-tv-tooltip small {
+      display: block;
+      font-weight: 400;
+      font-size: .65rem;
+      opacity: .8;
+    }
+    .fab-tv-tooltip::after {
+      content: '';
+      position: absolute;
+      right: -7px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 7px solid transparent;
+      border-right: none;
+      border-left-color: #013C8C;
+    }
+    .fab-tv-wrap:hover .fab-tv-tooltip {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    /* ── Tarjeta Vecino quick card ── */
+    .quick__card--clickable {
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+    }
+    .quick__card--clickable:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,137,123,.25);
+    }
+    .quick__card--clickable:focus-visible {
+      outline: 3px solid var(--clr-primary);
+      outline-offset: 3px;
+    }
+    .quick__badge {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: #00897b;
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      padding: 2px 8px;
+      border-radius: 99px;
+      text-transform: uppercase;
+    }
+
+    /* ── Overlay ── */
+    .tv-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(1,20,50,.62);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity .28s ease;
+    }
+    .tv-overlay.tv-overlay--visible {
+      opacity: 1;
+    }
+    .tv-overlay[hidden] {
+      display: none;
+    }
+
+    /* ── Modal box ── */
+    .tv-modal {
+      background: #fff;
+      border-radius: 20px;
+      max-width: 760px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 32px 80px rgba(0,0,0,.28);
+      transform: translateY(28px) scale(.97);
+      transition: transform .3s cubic-bezier(.22,1,.36,1);
+      scrollbar-width: thin;
+      scrollbar-color: #b2dfdb #f0f0f0;
+    }
+    .tv-overlay--visible .tv-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    /* ── Header ── */
+    .tv-modal__header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem 1.75rem 1.25rem;
+      background: linear-gradient(135deg,#013C8C 0%,#0057c8 50%,#00a0df 100%);
+      border-radius: 20px 20px 0 0;
+      color: #fff;
+      position: relative;
+    }
+    .tv-modal__logo-wrap {
+      flex-shrink: 0;
+      background: rgba(255,255,255,.15);
+      border-radius: 12px;
+      padding: .5rem .75rem;
+      display: flex;
+      align-items: center;
+    }
+    .tv-modal__logo {
+      height: 52px;
+      filter: brightness(0) invert(1);
+    }
+    .tv-modal__eyebrow {
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .8;
+      margin: 0 0 .2rem;
+    }
+    .tv-modal__title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0 0 .25rem;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .tv-modal__subtitle {
+      font-size: .82rem;
+      opacity: .85;
+      margin: 0;
+    }
+    .tv-modal__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255,255,255,.18);
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .tv-modal__close:hover { background: rgba(255,255,255,.32); }
+    .tv-modal__close .material-icons-round { font-size: 1.25rem; }
+
+    /* ── Benefits ── */
+    .tv-benefits {
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
+    }
+    .tv-benefit {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #f7faff;
+      border: 1.5px solid #e3edf8;
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .tv-benefit:hover {
+      border-color: #00A0DF;
+      box-shadow: 0 4px 16px rgba(0,160,223,.12);
+    }
+    .tv-benefit__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg,#e0f7fa,#b2ebf2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #00897b;
+    }
+    .tv-benefit__icon .material-icons-round { font-size: 1.4rem; }
+    .tv-benefit__body { flex: 1; min-width: 0; }
+    .tv-benefit__body h3 {
+      font-size: .92rem;
+      font-weight: 700;
+      color: #013C8C;
+      margin: 0 0 .18rem;
+    }
+    .tv-benefit__body p {
+      font-size: .78rem;
+      color: #555;
+      margin: 0 0 .3rem;
+      line-height: 1.4;
+    }
+    .tv-benefit__cond {
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+      font-size: .7rem;
+      color: #888;
+      background: #f0f0f0;
+      border-radius: 99px;
+      padding: 2px 8px;
+    }
+    .tv-benefit__cond .material-icons-round { font-size: .85rem; }
+    .tv-benefit__badge {
+      flex-shrink: 0;
+      font-size: .82rem;
+      font-weight: 800;
+      border-radius: 10px;
+      padding: .35rem .65rem;
+      letter-spacing: .04em;
+      text-align: center;
+      min-width: 64px;
+    }
+    .tv-badge--green  { background: #e8f5e9; color: #2e7d32; }
+    .tv-badge--teal   { background: #e0f2f1; color: #00695c; }
+    .tv-badge--blue   { background: #e3f2fd; color: #1565c0; }
+
+    /* ── Footer ── */
+    .tv-modal__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .75rem;
+      padding: 1rem 1.75rem 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    .tv-modal__valid {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .78rem;
+      color: #555;
+    }
+    .tv-modal__valid .material-icons-round { font-size: 1rem; color: #00897b; }
+    .tv-modal__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      background: linear-gradient(135deg,#013C8C,#0057c8);
+      color: #fff;
+      font-size: .82rem;
+      font-weight: 700;
+      padding: .55rem 1.2rem;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .tv-modal__cta:hover { opacity: .88; transform: translateY(-1px); color:#fff; }
+    .tv-modal__cta .material-icons-round { font-size: .9rem; }
+
+    /* Responsive */
+    @media (max-width: 520px) {
+      .tv-modal__header { flex-direction: column; }
+      .tv-modal__logo-wrap { display: none; }
+      .tv-benefit { flex-wrap: wrap; }
+      .tv-benefit__badge { width: 100%; text-align: left; }
+      .tv-modal__footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      const overlay  = document.getElementById('tvOverlay');
+      const btn      = document.getElementById('btnTarjetaVecino');
+      const closeBtn = document.getElementById('tvClose');
+
+      function openModal() {
+        overlay.hidden = false;
+        requestAnimationFrame(() => overlay.classList.add('tv-overlay--visible'));
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        overlay.classList.remove('tv-overlay--visible');
+        setTimeout(() => { overlay.hidden = true; document.body.style.overflow = ''; }, 280);
+        btn.focus();
+      }
+
+      btn.addEventListener('click', openModal);
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); } });
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !overlay.hidden) closeModal(); });
+
+      // FAB flotante también abre el modal
+      const fabBtn = document.getElementById('fabTarjetaVecino');
+      if (fabBtn) fabBtn.addEventListener('click', openModal);
+    })();
+  </script>
 
   <script src="script.js"></script>
 </body>
