@@ -362,13 +362,33 @@ a{text-decoration:none;color:inherit}
 @media(max-width: 768px) {
   .gr-stats-container {
     flex-direction: column-reverse;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
+    width: 100%;
+  }
+  .gr-score-block {
+    text-align: center;
+  }
+  .gr-bars {
+    width: 100%;
+    max-width: 100%;
   }
   .gr-summary-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+  .gr-cards {
+    grid-template-columns: 1fr;
+  }
+  .gr-card {
+    padding: 1.2rem;
+  }
+  .gr-card-photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
   }
 }
 
