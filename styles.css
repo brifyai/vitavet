@@ -323,6 +323,7 @@ a{text-decoration:none;color:inherit}
   cursor: pointer;
   color: #5f6368;
   padding: 0;
+  text-decoration: none;
 }
 .gr-card-rating {
   display: flex;
