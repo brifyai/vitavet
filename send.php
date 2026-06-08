@@ -14,7 +14,7 @@ header('Access-Control-Allow-Origin: https://vitavet.cl');
 header('Access-Control-Allow-Methods: POST');
 
 // ── Config ────────────────────────────────────────────────
-define('MAIL_TO',      'contacto@vitavetclinica.com');
+define('MAIL_TO',      'veterinagric@gmail.com');
 define('MAIL_SUBJECT', 'Nueva solicitud de cita — VitaVet');
 define('RATE_LIMIT',   60);   // segundos entre envíos por IP
 define('RATE_FILE',    sys_get_temp_dir() . '/vitavet_rate_');
