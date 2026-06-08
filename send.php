@@ -1,4 +1,11 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
 // ── Security headers ──────────────────────────────────────
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
@@ -71,18 +78,35 @@ $body .= "Teléfono: {$phone}\n";
 $body .= "Servicio: {$service}\n\n";
 $body .= "Mensaje:\n{$message}\n";
 
-// ── Headers del correo ────────────────────────────────────
-$headers  = "From: VitaVet Web <no-reply@vitavet.cl>\r\n";
-$headers .= "Reply-To: {$name} <{$email}>\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+// ── Envío con PHPMailer y Gmail SMTP ──────────────────────
+$mail = new PHPMailer(true);
 
-// ── Envío ─────────────────────────────────────────────────
-$sent = mail(MAIL_TO, MAIL_SUBJECT, $body, $headers);
+try {
+    // Configuración del servidor SMTP de Gmail
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'veterinagric@gmail.com'; // Tu correo Gmail
+    $mail->Password   = 'AQUI_VA_TU_CONTRASEÑA_DE_APLICACION'; // <- DEBES PEGAR LA CONTRASEÑA AQUÍ
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
+    $mail->CharSet    = 'UTF-8';
 
-if ($sent) {
+    // Remitentes y Destinatarios
+    $mail->setFrom('veterinagric@gmail.com', 'VitaVet Web');
+    $mail->addAddress(MAIL_TO); // Se envía a contacto@vitavetclinica.com o a quien definas en la config
+    $mail->addReplyTo($email, $name); // Para que al hacer "Responder", le respondas al cliente
+
+    // Contenido del Correo
+    $mail->isHTML(false);
+    $mail->Subject = MAIL_SUBJECT;
+    $mail->Body    = $body;
+
+    // Enviar
+    $mail->send();
     json_out(true, '¡Gracias! Te contactaremos muy pronto. 🐾');
-} else {
+} catch (Exception $e) {
     http_response_code(500);
+    // json_out(false, 'Mailer Error: ' . $mail->ErrorInfo); // Descomentar para ver errores técnicos
     json_out(false, 'No pudimos enviar el mensaje. Escríbenos a ' . MAIL_TO);
 }
