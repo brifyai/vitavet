@@ -87,7 +87,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'veterinagric@gmail.com'; // Tu correo Gmail
-    $mail->Password   = 'AQUI_VA_TU_CONTRASEÑA_DE_APLICACION'; // <- DEBES PEGAR LA CONTRASEÑA AQUÍ
+    $mail->Password   = 'znttzijvsubnnuyl';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
     $mail->CharSet    = 'UTF-8';
